@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013 THE EVENTS CALENDAR'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the EVENTS CALENDARS package.
+# JACOB TUZ POOT<JETP79@GMAIL.COM>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.1 pre-alpha\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-04 17:53-0600\n"
+"PO-Revision-Date: 2013-04-02 11:11+0600\n"
+"Last-Translator: JACOB TUZ POOT <JETP79@GMAIL.COM>\n"
+"Language-Team: ES <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: es_MX\n"
+"X-Source-Language: C\n"
+
+#: admin.py:9 models.py:161
+msgid "Dates and places for event"
+msgstr "Fechas y horarios del evento"
+
+#: admin.py:19
+msgid "Image Gallery"
+msgstr "Galería de imágenes"
+
+#: admin.py:77
+#, python-format
+msgid "%(row_count)d Event was successfully marked as published"
+msgid_plural "%(row_count)d Events were successfully marked as published"
+msgstr[0] "%(row_count)d Evento fue exitosamente marcado como publico"
+msgstr[1] "%(row_count)d Eventos fueron exitosamente marcados como publicos"
+
+#: admin.py:81
+msgid "Publish"
+msgstr "Publicar"
+
+#: admin.py:86
+#, python-format
+msgid "%(row_count)d Event was successfully marked as not published"
+msgid_plural "%(row_count)d Events were successfully marked as not published"
+msgstr[0] "%(row_count)d Evento fue exitosamente quitado de las publicaciones"
+msgstr[1] ""
+"%(row_count)d Eventos fueron exitosamente quitados de las publicaciones"
+
+#: admin.py:90
+msgid "Deactivate publication"
+msgstr "Quitar publicación de evento(s) Selecionado(s)"
+
+#: models.py:104
+msgid "Site"
+msgstr "Sitio"
+
+#: models.py:105
+msgid "User"
+msgstr "Usuario"
+
+#: models.py:106
+msgid "Title event"
+msgstr "Título del evento"
+
+#: models.py:107
+msgid "Slug"
+msgstr "Slug"
+
+#: models.py:109
+msgid "This field is auto generated based on event title"
+msgstr "Este campo es auto generado en base al título del evento"
+
+#: models.py:111
+msgid "Event description"
+msgstr "Descripción del evento"
+
+#: models.py:112
+msgid "Image presentation for events section"
+msgstr "Imagen de portada para la sección de eventos"
+
+#: models.py:114
+msgid "You must define some standard zise for your events section"
+msgstr "Debe definir una medida Estándar para su sección de eventos"
+
+#: models.py:115
+msgid "Creation date"
+msgstr "Fecha de creación"
+
+#: models.py:118
+msgid "Last Update"
+msgstr "Ultima Actualización"
+
+#: models.py:120
+msgid "Is Active?"
+msgstr "Esta activo?"
+
+#: models.py:124 models.py:148 models.py:174 models.py:191
+msgid "Event"
+msgstr "Evento"
+
+#: models.py:125
+msgid "Events Calendar"
+msgstr "Calendario de Eventos"
+
+#: models.py:143
+msgid "Active"
+msgstr "Activo"
+
+#: models.py:144
+msgid "Suspended"
+msgstr "Suspendido"
+
+#: models.py:145
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#: models.py:149
+msgid "Date"
+msgstr "Fecha"
+
+#: models.py:150
+msgid "Time"
+msgstr "Hora"
+
+#: models.py:151
+msgid "Country"
+msgstr "País"
+
+#: models.py:152
+msgid "State"
+msgstr "Estado"
+
+#: models.py:153
+msgid "City"
+msgstr "Ciudad"
+
+#: models.py:154
+msgid "Place Event"
+msgstr "Lugar del evento"
+
+#: models.py:155
+msgid "Status Event date"
+msgstr "Estatus de la fecha del evento"
+
+#: models.py:157
+msgid "Aditional comments"
+msgstr "Comentarios adicionales"
+
+#: models.py:160
+msgid "Event Date"
+msgstr "Fecha del evento"
+
+#: models.py:175
+msgid "Image item"
+msgstr "Imagen"
+
+#: models.py:176
+msgid "Image description"
+msgstr "Descripción de la imagen"
+
+#: models.py:179
+msgid "Image Event"
+msgstr "Imagen del evento"
+
+#: models.py:180
+msgid "Image Gallery for event"
+msgstr "Galería de imágenes para el evento"
+
+#: models.py:192
+msgid "Video Item"
+msgstr "Vídeo"
+
+#: models.py:193
+msgid "Video description"
+msgstr "Descripción del vídeo"
+
+#: models.py:197
+msgid "Video Event"
+msgstr "Vídeo del evento"
+
+#: models.py:198
+msgid "Video Gallery for event"
+msgstr "Galería de vídeos para el evento"
