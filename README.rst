@@ -9,7 +9,7 @@ events publications on a web site.
 
 Dependency Package
 ------------------
-You must install `django-extensions` to get this app working well 
+You must install ``django-extensions`` to get this app working well 
 
 Features
 --------
@@ -20,7 +20,14 @@ Some basic features from this application are:
 * Main image for event
 * WYSIWYG editor for main content based on tinymce 4.0b3, if you want to set your own
   language visit `tinymce translation page <https://www.transifex.com/projects/p/tinymce/>`_
-  and look for your translation and put it on `static/js/tinymce/langs`
+  and look for your translation and put it on ``static/js/tinymce/langs`` and set your
+  language parameter on ``static/js/textarea-events.js`` to::
+
+      tinymce.init({
+         language: 'your-language'
+      });
+
+  
 
 .. image:: docs/images/main-content.png 
     :alt: Main Content
