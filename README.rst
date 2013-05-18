@@ -1,11 +1,15 @@
-======================
-Django Events calendar 
-======================
+=====================================
+Django Events calendar v0.3-pre-alpha 
+=====================================
 
 Summary
 -------
 The aim of this project is help developers with basic tasks for 
 events publications on a web site.
+
+Dependency Package
+------------------
+You must install `django-extensions` to get this app working well 
 
 Features
 --------
@@ -14,13 +18,16 @@ Some basic features from this application are:
 * Support for multiple web sites using django.contrib.sites.
 * Allows to know user authoring.
 * Main image for event
+* WYSIWYG editor for main content based on tinymce 4.0b3, if you want to set your own
+  language visit `tinymce translation page <https://www.transifex.com/projects/p/tinymce/>`_
+  and look for your translation and put it on `static/js/tinymce/langs`
 
 .. image:: docs/images/main-content.png 
     :alt: Main Content
 
 * Creation date & last update for event.
 * Allows to publish and unpublish and event.
-* Roadmap whit:
+* Roadmap with:
     * Event Date.
     * Event Place.
     * Event City.
@@ -31,7 +38,11 @@ Some basic features from this application are:
 .. image:: docs/images/image-gallery.png 
     :alt: Image Gallery
 
-* Video Gallery.
+* Video Gallery with youtube previsualization.
+
+.. image:: docs/images/youtube-previsualization.png 
+    :alt: Image Gallery
+
 * Get summary for:
     * Active events.
     * Inactive events.

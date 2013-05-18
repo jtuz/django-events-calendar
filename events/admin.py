@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
+from django.conf import settings
 from django.utils.translation import ungettext, ugettext_lazy as _
 from events.models import Event, EventDate, ImageGallery, VideoGallery
 from widgets import AdminImageWidget, AdminYoutubeWidget
@@ -54,6 +55,11 @@ class VideoGalleryInline(admin.TabularInline):
 
 
 class EventAdmin(admin.ModelAdmin):
+    class Media:
+        static_url = getattr(settings, 'STATIC_URL', '/static/')
+        js = (static_url+'js/tinymce/tinymce.min.js',
+              static_url+'js/textarea-events.js')
+
     inlines = [EventDateInline, ImageGalleryInline, VideoGalleryInline]
     list_display = ['user', 'title', 'creation_date', 'last_update', 'is_active']
     list_filter = ['is_active', 'site']

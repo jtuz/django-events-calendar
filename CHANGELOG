@@ -1,0 +1,12 @@
+=========
+CHANGELOG
+=========
+
+2013-05-17 Jacob Tuz Poot <jetp79@gmail.com> 0.3-pre-alpha
+
+    * Include tynymce version 4.0b3
+
+2013-05-02 Jacob Tuz Poot <jetp79@gmail.com> 0.1-pre-alpha
+   
+    * First release, include basic tasks mentioned on README.rst
+
