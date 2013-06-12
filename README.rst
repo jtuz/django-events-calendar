@@ -1,5 +1,5 @@
 =====================================
-Django Events calendar v0.3-pre-alpha 
+Django Events calendar v0.3.1-pre-alpha 
 =====================================
 
 Summary

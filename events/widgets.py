@@ -54,10 +54,11 @@ class AdminYoutubeWidget(AdminTextInputWidget):
         EMBED_HTML = """<div><iframe src="%s?rel=0" 
                         width="400" height="200" frameborder></iframe></div>
                      """
-        link_pattern = re.compile('^.+(https?://www.youtube.com/embed/[0-9a-zA-Z\-_]+).+$')
+        link_pattern = re.compile(r"""^.+(https?://www.youtube[\-nockie]*?.com/embed/[0-9a-zA-Z\-_]+).+$""")
         output = []
         if value:
-            youtube_link = link_pattern.match(str(value)).group(1) 
+            match_obj = link_pattern.search(str(value))
+            youtube_link =  match_obj.group(1)
             output.append(EMBED_HTML % youtube_link)
         output.append(super(AdminTextInputWidget, self).render(name, value, attrs))
         return mark_safe(u''.join(output))

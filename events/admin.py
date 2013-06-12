@@ -62,6 +62,7 @@ class EventAdmin(admin.ModelAdmin):
 
     inlines = [EventDateInline, ImageGalleryInline, VideoGalleryInline]
     list_display = ['user', 'title', 'creation_date', 'last_update', 'is_active']
+    list_display_links = ['title']
     list_filter = ['is_active', 'site']
     search_fields = ['title']
     exclude = ['user']
