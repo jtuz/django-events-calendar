@@ -4,13 +4,13 @@ from django.contrib.sites.models import Site
 from django.contrib.auth.models import User
 from django_extensions.db.fields import AutoSlugField
 from django.utils.translation import ugettext_lazy as _
-from datetime import date
+from datetime import date, timedelta
 
 
 class EventManager(models.Manager):
     """Custom manager for ``Event`` model.
-    
-    The methods defined here provide shortcuts to get 
+
+    The methods defined here provide shortcuts to get
     information about events.
 
     """
@@ -99,6 +99,25 @@ class EventManager(models.Manager):
         else:
             return self.active(user=user, site=site, **kwargs).filter(eventdate__date__month=searched_month).distinct()
 
+    def get_this_week(self, user=None, site=None, **kwargs):
+        """Returns a list of events for this week.
+        
+          Take todays date. Subtract the number of days which already 
+          passed this week (this gets you 'last' monday). Add one week.  
+        """
+        if not site:
+            site = Site.objects.get_current()
+        today = date.today()
+        first_week_day = today - timedelta(days=today.weekday())
+        print first_week_day
+        last_week_day = today + timedelta(days=-today.weekday(), weeks=1)
+        print last_week_day
+        
+        if not user:
+            return self.active(site=site, **kwargs).filter(eventdate__date__range=(first_week_day, last_week_day)).distinct()
+        else:
+            return self.active(user=user, site=site, **kwargs).filter(eventdate__date__range=(first_week_day, last_week_day)).distinct()
+
 
 class Event(models.Model):
     """Events Calendar."""
@@ -140,9 +159,15 @@ class Event(models.Model):
         event_dates = self.eventdate_set.all()
         list_item_dates = []
         for month, days in groupby(event_dates, lambda current_date: current_date.date.strftime("%B")):
-            item_date= "%s (%s)" % (month, ",".join(list([str(day.date.day) for day in days])))
+            item_date = "%s (%s)" % (month, ",".join(list([str(day.date.day) for day in days])))
             list_item_dates.append(item_date)
         return "-".join(list_item_dates)
+
+    def get_first_day(self):
+        return self.eventdate_set.all().order_by('date')[0].date
+
+    def get_last_day(self):
+        return self.eventdate_set.all().order_by('-date')[0].date
 
 
 class EventDate(models.Model):

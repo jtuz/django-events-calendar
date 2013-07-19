@@ -1,0 +1,24 @@
+
+Changelog for django-events-calendar:
+
+2013-07-18: version 0.3.6-pre-alpha
+
+   * Display JSON String to work with Fullcalendar http://arshaw.com/fullcalendar/ 
+
+2013-06-17: version 0.3.5-pre-alpha
+
+   * Get the first and last day for an Event from event dates 
+   * Get this week events, taken today's date
+
+2013-05-17: version 0.3.1-pre-alpha
+
+   * Correction for Youtube Widget Bug 
+   * Change display-link to event title instead user on admin interface 
+
+2013-05-17: version 0.3-pre-alpha
+
+   * Include tynymce version 4.0b3
+
+2013-05-02: version 0.1-pre-alpha
+   
+   * First release, include basic tasks mentioned on README.rst

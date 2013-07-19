@@ -1,5 +1,5 @@
 =====================================
-Django Events calendar v0.3.1-pre-alpha 
+Django Events calendar v0.3.6-pre-alpha 
 =====================================
 
 Summary
@@ -50,6 +50,33 @@ Some basic features from this application are:
 .. image:: docs/images/youtube-previsualization.png 
     :alt: Image Gallery
 
+
+* Json string to work with `fullcalendar jQuery plugin <http://arshaw.com/fullcalendar/>`_
+  described on `this documentation <http://arshaw.com/fullcalendar/docs/event_data/events_json_feed/>`_::
+
+        [{
+             "url": "/eventos/current/9a-y-10a-etapas-del-campeonato-nacional-de-enduro", 
+             "start": "2013-06-28", 
+             "end": "2013-06-30", 
+             "title": "9A Y 10A ETAPAS DEL CAMPEONATO NACIONAL DE ENDURO"
+         }, 
+         {
+             "url": "/eventos/current/racing-bike-capital", 
+             "start": "2013-06-23", 
+             "end": "2013-06-23",
+             "title": "RACING BIKE CAPITAL"
+         }, 
+         {
+             "url": "/eventos/current/campeonato-nacional-nestel-de-supermoto", 
+             "start": "2013-06-01", 
+             "end": "2013-06-02", 
+             "title": "CAMPEONATO NACIONAL NEXTEL DE SUPERMOTO"
+         }] 
+
+Here are some samples for Django Events Calendar in action with fullcalendar:
+
+* `Yamaha Terraventura <http://www.yamaha-terraventura.com/seccion/eventos/>`_
+
 * Get summary for:
     * Active events.
     * Inactive events.
@@ -62,6 +89,7 @@ Some basic features from this application are:
     * Events by date.
     * Events by Month.
     * Dates for event.
+    * The first & last day for event
 
 If you want to contribute with any kind of corrections or 
 request features, feel free to make a fork or send me an email.
