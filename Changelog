@@ -1,6 +1,20 @@
 
 Changelog for django-events-calendar:
 
+2013-08-22: version 0.3.7a1
+   * Change youtube Regexp on AdminYoutubeWidget (widgets.py) to allow the
+     follow formats:
+	 http://www.youtube.com/watch?v=6o-nmK9WRGE&feature=player_embedded
+	 http://www.youtube.com/watch?v=0zM3nApSvMg&feature=feedrec_grec_index
+	 http://www.youtube.com/user/IngridMichaelsonVEVO#p/a/u/1/QdK8U-VIH_o
+	 http://www.youtube.com/v/0zM3nApSvMg?fs=1&hl=en_US&rel=0
+	 http://www.youtube.com/watch?v=0zM3nApSvMg#t=0m10s
+	 http://www.youtube.com/embed/0zM3nApSvMg?rel=0
+	 http://www.youtube.com/watch?v=0zM3nApSvMg
+	 http://youtu.be/0zM3nApSvMg 
+
+   * change return format on get_version() function to compliance with PEP 386 
+
 2013-07-18: version 0.3.6-pre-alpha
 
    * Display JSON String to work with Fullcalendar http://arshaw.com/fullcalendar/ 

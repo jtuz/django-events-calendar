@@ -1,4 +1,3 @@
-# SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2013 THE EVENTS CALENDARS'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the EVENTS CALENDAR'S package.
 # JACOB TUZ POOT<EMAIL@ADDRESS>, 2013.
@@ -6,10 +5,10 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: 0.0.1 pre-alpha\n"
+"Project-Id-Version: 0.3.7a1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-04 14:04-0600\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2013-08-22 18:53-0500\n"
+"PO-Revision-Date: 2013-08-22 18:53+0500\n"
 "Last-Translator: JACOB TUZ POOT <JETP79@GMAIL.COM>\n"
 "Language-Team: EN <LL@li.org>\n"
 "Language: en\n"
@@ -17,156 +16,168 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: admin.py:9 models.py:161
+#: admin.py:12 models.py:197
 msgid "Dates and places for event"
 msgstr ""
 
-#: admin.py:19
+#: admin.py:29
 msgid "Image Gallery"
 msgstr ""
 
-#: admin.py:57
-msgid "1 Event was"
-msgstr ""
-
-#: admin.py:59
+#: admin.py:93
 #, python-format
-msgid "%(row_count)s Events were"
+msgid "%(row_count)d Event was successfully marked as published"
+msgid_plural "%(row_count)d Events were successfully marked as published"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin.py:97
+msgid "Publish"
 msgstr ""
 
-#: admin.py:60
+#: admin.py:102
 #, python-format
-msgid "%(message_bit)s successfully marked as published"
+msgid "%(row_count)d Event was successfully marked as not published"
+msgid_plural "%(row_count)d Events were successfully marked as not published"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin.py:106
+msgid "Deactivate publication"
 msgstr ""
 
-#: models.py:104
+#: models.py:124
 msgid "Site"
 msgstr ""
 
-#: models.py:105
+#: models.py:125
 msgid "User"
 msgstr ""
 
-#: models.py:106
+#: models.py:126
 msgid "Title event"
 msgstr ""
 
-#: models.py:107
+#: models.py:127
 msgid "Slug"
 msgstr ""
 
-#: models.py:109
+#: models.py:129
 msgid "This field is auto generated based on event title"
 msgstr ""
 
-#: models.py:111
+#: models.py:131
 msgid "Event description"
 msgstr ""
 
-#: models.py:112
+#: models.py:132
 msgid "Image presentation for events section"
 msgstr ""
 
-#: models.py:114
+#: models.py:134
 msgid "You must define some standard zise for your events section"
 msgstr ""
 
-#: models.py:115
+#: models.py:135
 msgid "Creation date"
 msgstr ""
 
-#: models.py:118
+#: models.py:138
 msgid "Last Update"
 msgstr ""
 
-#: models.py:120
+#: models.py:140
 msgid "Is Active?"
 msgstr ""
 
-#: models.py:124 models.py:148 models.py:174 models.py:191
+#: models.py:144 models.py:184 models.py:210 models.py:227
 msgid "Event"
 msgstr ""
 
-#: models.py:125
+#: models.py:145
 msgid "Events Calendar"
 msgstr ""
 
-#: models.py:143
+#: models.py:179
 msgid "Active"
 msgstr ""
 
-#: models.py:144
+#: models.py:180
 msgid "Suspended"
 msgstr ""
 
-#: models.py:145
+#: models.py:181
 msgid "Cancelled"
 msgstr ""
 
-#: models.py:149
+#: models.py:185
 msgid "Date"
 msgstr ""
 
-#: models.py:150
+#: models.py:186
 msgid "Time"
 msgstr ""
 
-#: models.py:151
+#: models.py:187
 msgid "Country"
 msgstr ""
 
-#: models.py:152
+#: models.py:188
 msgid "State"
 msgstr ""
 
-#: models.py:153
+#: models.py:189
 msgid "City"
 msgstr ""
 
-#: models.py:154
+#: models.py:190
 msgid "Place Event"
 msgstr ""
 
-#: models.py:155
+#: models.py:191
 msgid "Status Event date"
 msgstr ""
 
-#: models.py:157
+#: models.py:193
 msgid "Aditional comments"
 msgstr ""
 
-#: models.py:160
+#: models.py:196
 msgid "Event Date"
 msgstr ""
 
-#: models.py:175
+#: models.py:211
 msgid "Image item"
 msgstr ""
 
-#: models.py:176
+#: models.py:212
 msgid "Image description"
 msgstr ""
 
-#: models.py:179
+#: models.py:215
 msgid "Image Event"
 msgstr ""
 
-#: models.py:180
+#: models.py:216
 msgid "Image Gallery for event"
 msgstr ""
 
-#: models.py:192
+#: models.py:228
 msgid "Video Item"
 msgstr ""
 
-#: models.py:193
+#: models.py:229
 msgid "Video description"
 msgstr ""
 
-#: models.py:197
+#: models.py:233
 msgid "Video Event"
 msgstr ""
 
-#: models.py:198
+#: models.py:234
 msgid "Video Gallery for event"
+msgstr ""
+
+#: widgets.py:68
+msgid "This is not a valid youtube link"
 msgstr ""

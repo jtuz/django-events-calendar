@@ -4,12 +4,12 @@ Django Events calendar v0.3.6-pre-alpha
 
 Summary
 -------
-The aim of this project is help developers with basic tasks for 
+The aim for this project is to help developers with basic tasks for 
 events publications on a web site.
 
 Dependency Package
 ------------------
-You must install ``django-extensions`` to get this app working well 
+You need install ``django-extensions`` to get this app working well 
 
 Features
 --------

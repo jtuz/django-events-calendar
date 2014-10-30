@@ -10,20 +10,20 @@ from datetime import date, timedelta
 class EventManager(models.Manager):
     """Custom manager for ``Event`` model.
 
-    The methods defined here provide shortcuts to get
+    The aim for the methods defined here are to provide shortcuts to get
     information about events.
 
     """
     def active(self, **kwargs):
-        """Returns  a list of active events."""
+        """Returns  an active events list."""
         return self.filter(is_active=True, **kwargs)
 
     def inactive(self, **kwargs):
-        """Returns a list of inactive events."""
+        """Returns an inactive events list."""
         return self.filter(is_active=False, **kwargs)
 
     def get_recents(self, top=0, user=None, site=None, **kwargs):
-        """Returns a list of top recent events."""
+        """Returns a recent events list sorted by creation date and a posibility to extract a top number from the list."""
         if not site:
             site = Site.objects.get_current()
 
@@ -35,25 +35,25 @@ class EventManager(models.Manager):
             return self.active(site=site, user=user, **kwargs).order_by('-creation_date')[:limit]
 
     def get_by_site(self, site=None, **kwargs):
-        """Gets events by site."""
+        """Returns events by site."""
         if not site:
             site = Site.objects.get_current()
         return self.filter(site=site, **kwargs)
 
     def get_by_user(self, user, site=None, **kwargs):
-        """Returns all events filtered by username."""
+        """Returns all events filtered by user."""
         if not site:
             site = Site.objects.get_current()
         return self.active(user=user, site=site, **kwargs)
 
     def get_inactive_by_user(self, user, site=None, **kwargs):
-        """Returns all inactive events filtered by username"""
+        """Returns all inactive events filtered by user"""
         if not site:
             site = Site.objects.get_current()
         return self.inactive(user=user, site=site, **kwargs)
 
     def get_next_events(self, user=None, site=None, **kwargs):
-        """Returns a list with the next events."""
+        """Returns an events list with the next events."""
         if not site:
             site = Site.objects.get_current()
         if not user:
@@ -80,7 +80,7 @@ class EventManager(models.Manager):
             return self.active(user=user, site=site, **kwargs).filter(eventdate__date__iexact=date.today()).distinct()
 
     def get_by_date(self, date_event=None, user=None, site=None, **kwargs):
-        """Returns a list whit events filtered by date."""
+        """Returns an events list filtered by date."""
         if not site:
             site = Site.objects.get_current()
 
@@ -90,7 +90,7 @@ class EventManager(models.Manager):
             return self.active(user=user, site=site, **kwargs).filter(eventdate__date=date_event).distinct()
 
     def get_by_month(self, month=0, user=None, site=None, **kwargs):
-        """Returns a list of events filtered by Month."""
+        """Returns an events list filtered by Month."""
         if not site:
             site = Site.objects.get_current()
         searched_month = month if month > 0 else 1
@@ -100,10 +100,10 @@ class EventManager(models.Manager):
             return self.active(user=user, site=site, **kwargs).filter(eventdate__date__month=searched_month).distinct()
 
     def get_this_week(self, user=None, site=None, **kwargs):
-        """Returns a list of events for this week.
-        
-          Take todays date. Subtract the number of days which already 
-          passed this week (this gets you 'last' monday). Add one week.  
+        """Returns an events list for this week.
+
+          Take todays date. Subtract the number of days which already
+          passed this week (this gets you 'last' monday). Add one week.
         """
         if not site:
             site = Site.objects.get_current()
@@ -112,7 +112,7 @@ class EventManager(models.Manager):
         print first_week_day
         last_week_day = today + timedelta(days=-today.weekday(), weeks=1)
         print last_week_day
-        
+
         if not user:
             return self.active(site=site, **kwargs).filter(eventdate__date__range=(first_week_day, last_week_day)).distinct()
         else:
@@ -156,6 +156,7 @@ class Event(models.Model):
     def get_summary_dates(self):
         """Returns a summary of dates on this format: May (13, 20, 21)-Jun (1, 23, 30)."""
         from itertools import groupby
+        from django.template.defaultfilters import date as _date
         event_dates = self.eventdate_set.all()
         list_item_dates = []
         for month, days in groupby(event_dates, lambda current_date: current_date.date.strftime("%B")):

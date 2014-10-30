@@ -37,7 +37,7 @@ class ImageGalleryInline(admin.TabularInline):
     def formfield_for_dbfield(self, db_field, **kwargs):
         if db_field.name == 'image_item':
             kwargs.pop("request", None)
-            kwargs['widget'] = AdminImageWidget
+            kwargs['widget'] = AdminImageWidget()
             return db_field.formfield(**kwargs)
         return super(ImageGalleryInline, self).formfield_for_dbfield(db_field, **kwargs)
 
@@ -49,7 +49,7 @@ class VideoGalleryInline(admin.TabularInline):
     def formfield_for_dbfield(self, db_field, **kwargs):
         if db_field.name == 'video_item':
             kwargs.pop("request", None)
-            kwargs['widget'] = AdminYoutubeWidget
+            kwargs['widget'] = AdminYoutubeWidget()
             return db_field.formfield(**kwargs)
         return super(VideoGalleryInline, self).formfield_for_dbfield(db_field, **kwargs)
 
